@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginOrSignupActivity"
+    android:background="@color/colorAccent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginRight="65dp">
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_buttons"
+            android:text="Log in"
+            android:textColor="@color/colorAccent"
+            />
+
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_buttons_border"
+            android:text="Sign up"
+            android:textColor="@color/colorPrimary"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

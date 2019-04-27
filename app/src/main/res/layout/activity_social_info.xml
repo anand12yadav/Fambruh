@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SocialInfoActivity"
+    android:padding="10dp"
+    android:background="@color/colorAccent">
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show your social existence to the world"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/insta"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/insta"
+            />
+        <EditText
+            android:id="@+id/instaText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/insta"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/round_buttons_border"
+            android:hint="Username"
+            android:padding="10dp"/>
+
+        <ImageView
+            android:id="@+id/snapchat"
+            android:layout_below="@id/insta"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/snapchat"
+            android:layout_marginTop="15dp"/>
+        <EditText
+            android:id="@+id/snapchatText"
+            android:layout_width="match_parent"
+            android:layout_below="@id/instaText"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/snapchat"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/round_buttons_border"
+            android:layout_marginTop="15dp"
+            android:hint="Username"
+            android:padding="10dp"/>
+
+        <ImageView
+            android:id="@+id/fb"
+            android:layout_below="@id/snapchat"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/fb"
+            android:layout_marginTop="15dp"/>
+        <EditText
+            android:id="@+id/fbText"
+            android:layout_below="@id/snapchatText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/insta"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/round_buttons_border"
+            android:layout_marginTop="15dp"
+            android:hint="Username"
+            android:padding="10dp"/>
+
+        <ImageView
+            android:id="@+id/tiktok"
+            android:layout_below="@id/fb"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/tiktok"
+            android:layout_marginTop="15dp"/>
+        <EditText
+            android:id="@+id/tiktoktext"
+            android:layout_below="@id/fbText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/insta"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/round_buttons_border"
+            android:layout_marginTop="15dp"
+            android:hint="Username"
+            android:padding="10dp"/>
+
+        <ImageView
+            android:id="@+id/twitter"
+            android:layout_below="@id/tiktok"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/twittr"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:id="@+id/twitterText"
+            android:layout_below="@id/tiktoktext"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/insta"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/round_buttons_border"
+            android:layout_marginTop="15dp"
+            android:hint="Username"
+            android:padding="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/twitterText"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="15dp">
+            <Button
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Next"
+                android:background="@drawable/round_buttons"
+                android:textColor="@color/colorAccent"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

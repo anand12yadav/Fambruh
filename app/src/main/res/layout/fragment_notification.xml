@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.NotificationFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notifications"
+        android:textSize="34sp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This Week"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/img3"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="210dp"
+            android:layout_marginLeft="70dp"
+            android:src="@drawable/add"/>
+
+        <TextView
+            android:layout_marginTop="180dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tap to add story"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_marginLeft="130dp"
+            />
+        <TextView
+            android:layout_marginTop="250dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your People"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/img2"/>
+        <TextView
+            android:layout_marginTop="310dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mayur"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_marginLeft="130dp"
+            />
+
+        <TextView
+            android:layout_marginTop="340dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="19 hours ago"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginLeft="130dp"
+            />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="410dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/img5"/>
+
+        <TextView
+            android:layout_marginTop="420dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Anand"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_marginLeft="130dp"
+            />
+
+        <TextView
+            android:layout_marginTop="450dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="23 hours ago"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginLeft="130dp"
+            />
+
+    </RelativeLayout>
+
+</FrameLayout>
