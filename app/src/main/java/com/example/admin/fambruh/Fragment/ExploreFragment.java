@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,8 +30,19 @@ public class ExploreFragment extends Fragment {
         // Inflate the layout for this fragment
         v= inflater.inflate(R.layout.fragment_explore, container, false);
         recyclerView=v.findViewById(R.id.recycler_view);
+       // GridLayoutManager gridLayoutManager=new GridLayoutManager(getContext(),2,GridLayoutManager.VERTICAL,false);
+       // gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+         //  @Override
+        //   public int getSpanSize(int i) {
+         //     return (i%2==0? 2:1);
+        //   }
+
+
+      // });
+       // StaggeredGridLayoutManager staggeredGridLayoutManager=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         RecyclerViewAdapter recyclerViewAdapter=new RecyclerViewAdapter(getContext(),listProfile);
-        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
+        recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(recyclerViewAdapter);
 
         return v;
@@ -41,11 +54,11 @@ public class ExploreFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         listProfile=new ArrayList<>();
-        listProfile.add(new Profiles(R.drawable.img1));
-        listProfile.add(new Profiles(R.drawable.img2));
-        listProfile.add(new Profiles(R.drawable.img3));
-        listProfile.add(new Profiles(R.drawable.img4));
-        listProfile.add(new Profiles(R.drawable.img5));
+        listProfile.add(new Profiles(R.drawable.img1,R.drawable.img2,R.drawable.img3));
+        listProfile.add(new Profiles(R.drawable.img2,R.drawable.img3,R.drawable.img1));
+        listProfile.add(new Profiles(R.drawable.img3,R.drawable.img4,R.drawable.img5));
+        listProfile.add(new Profiles(R.drawable.img4,R.drawable.img3,R.drawable.img2));
+        listProfile.add(new Profiles(R.drawable.img5,R.drawable.img4,R.drawable.img3));
 
 
 
