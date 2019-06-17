@@ -9,11 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.admin.fambruh.Profiles;
 import com.example.admin.fambruh.R;
-import com.example.admin.fambruh.RecyclerViewAdapter;
-import com.example.admin.fambruh.RecyclerViewStoriesAdapter;
-import com.example.admin.fambruh.StoriesData;
+import com.example.admin.fambruh.RecyclerViewMomentStoriesAdapter;
+import com.example.admin.fambruh.MomentStoriesData;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +20,7 @@ import java.util.List;
 public class ProfileFragment extends Fragment {
 
     View v;
-    List<StoriesData> listStories;
+    List<MomentStoriesData> listStories;
     private RecyclerView recyclerView;
 
     @Override
@@ -32,7 +30,7 @@ public class ProfileFragment extends Fragment {
         v= inflater.inflate(R.layout.fragment_profile, container, false);
         recyclerView=v.findViewById(R.id.storiesData_recyclerView);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
-        RecyclerViewStoriesAdapter recyclerViewAdapter=new RecyclerViewStoriesAdapter(getContext(),listStories);
+        RecyclerViewMomentStoriesAdapter recyclerViewAdapter=new RecyclerViewMomentStoriesAdapter(getContext(),listStories);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(recyclerViewAdapter);
 
@@ -44,10 +42,10 @@ public class ProfileFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         listStories=new ArrayList<>();
-        listStories.add(new StoriesData(R.drawable.img3,R.drawable.img2,R.drawable.img3));
-        listStories.add(new StoriesData(R.drawable.img3,R.drawable.img3,R.drawable.img1));
-        listStories.add(new StoriesData(R.drawable.img3,R.drawable.img4,R.drawable.img5));
-        listStories.add(new StoriesData(R.drawable.img4,R.drawable.img3,R.drawable.img2));
-        listStories.add(new StoriesData(R.drawable.img5,R.drawable.img4,R.drawable.img3));
+        listStories.add(new MomentStoriesData(R.drawable.img3,R.drawable.img2,R.drawable.img3));
+        listStories.add(new MomentStoriesData(R.drawable.img3,R.drawable.img3,R.drawable.img1));
+        listStories.add(new MomentStoriesData(R.drawable.img3,R.drawable.img4,R.drawable.img5));
+        listStories.add(new MomentStoriesData(R.drawable.img4,R.drawable.img3,R.drawable.img2));
+        listStories.add(new MomentStoriesData(R.drawable.img5,R.drawable.img4,R.drawable.img3));
     }
 }

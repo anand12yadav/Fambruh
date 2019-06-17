@@ -1,14 +1,14 @@
 package com.example.admin.fambruh;
 
-public class StoriesData {
+public class MomentStoriesData {
     private int StoriesThumbnail;
     private int StoriesThumbnail2;
     private int StoriesThumbnail3;
 
-    public StoriesData() {
+    public MomentStoriesData() {
     }
 
-    public StoriesData(int storiesThumbnail,int storiesThumbnail2,int storiesThumbnail3) {
+    public MomentStoriesData(int storiesThumbnail, int storiesThumbnail2, int storiesThumbnail3) {
         StoriesThumbnail = storiesThumbnail;
         StoriesThumbnail2= storiesThumbnail2;
         StoriesThumbnail3= storiesThumbnail3;

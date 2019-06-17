@@ -15,15 +15,15 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class RecyclerViewStoriesAdapter extends RecyclerView.Adapter<RecyclerViewStoriesAdapter.MyViewHolder> {
+public class RecyclerViewMomentStoriesAdapter extends RecyclerView.Adapter<RecyclerViewMomentStoriesAdapter.MyViewHolder> {
 
     private Context mContext;
-    List<StoriesData> mData;
+    List<MomentStoriesData> mData;
 
     public static final int LAYOUT_DESIGN_0DD=0;
     public static final int LAYOUT_DESIGN_EVEN=1;
 
-    public RecyclerViewStoriesAdapter(Context mContext, List<StoriesData> mData) {
+    public RecyclerViewMomentStoriesAdapter(Context mContext, List<MomentStoriesData> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
@@ -33,10 +33,10 @@ public class RecyclerViewStoriesAdapter extends RecyclerView.Adapter<RecyclerVie
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         if(i==LAYOUT_DESIGN_EVEN ){
             View view= LayoutInflater.from(mContext).inflate(R.layout.cardview_moments_2,viewGroup,false);
-            return new RecyclerViewStoriesAdapter.MyViewHolder(view);
+            return new RecyclerViewMomentStoriesAdapter.MyViewHolder(view);
         }else {
             View view=LayoutInflater.from(mContext).inflate(R.layout.cardview_moments_1,viewGroup,false);
-            return new RecyclerViewStoriesAdapter.MyViewHolder(view);
+            return new RecyclerViewMomentStoriesAdapter.MyViewHolder(view);
         }
     }
 

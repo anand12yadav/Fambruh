@@ -1,15 +1,15 @@
 package com.example.admin.fambruh;
 
-public class Profiles {
+public class HomePageProfilesData {
 
     private int Thumbnail;
     private int Thumbnail2;
     private int Thumbnail3;
 
-    public Profiles() {
+    public HomePageProfilesData() {
     }
 
-    public Profiles(int thumbnail,int thumbnail2,int thumbnail3) {
+    public HomePageProfilesData(int thumbnail, int thumbnail2, int thumbnail3) {
         Thumbnail = thumbnail;
         Thumbnail2 = thumbnail2;
         Thumbnail3 = thumbnail3;

@@ -3,18 +3,15 @@ package com.example.admin.fambruh.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.admin.fambruh.Profiles;
+import com.example.admin.fambruh.HomePageProfilesData;
 import com.example.admin.fambruh.R;
-import com.example.admin.fambruh.RecyclerViewAdapter;
-import com.squareup.picasso.Picasso;
+import com.example.admin.fambruh.RecyclerViewProfileAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +20,7 @@ public class ExploreFragment extends Fragment {
 
 
     View v;
-    List<Profiles> listProfile;
+    List<HomePageProfilesData> listProfile;
     private RecyclerView recyclerView;
 
     @Override
@@ -42,7 +39,7 @@ public class ExploreFragment extends Fragment {
       // });
        // StaggeredGridLayoutManager staggeredGridLayoutManager=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
-        RecyclerViewAdapter recyclerViewAdapter=new RecyclerViewAdapter(getContext(),listProfile);
+        RecyclerViewProfileAdapter recyclerViewAdapter=new RecyclerViewProfileAdapter(getContext(),listProfile);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(recyclerViewAdapter);
 
@@ -57,11 +54,11 @@ public class ExploreFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         listProfile=new ArrayList<>();
-        listProfile.add(new Profiles(R.drawable.img3,R.drawable.img2,R.drawable.img3));
-        listProfile.add(new Profiles(R.drawable.img3,R.drawable.img3,R.drawable.img1));
-        listProfile.add(new Profiles(R.drawable.img3,R.drawable.img4,R.drawable.img5));
-        listProfile.add(new Profiles(R.drawable.img4,R.drawable.img3,R.drawable.img2));
-        listProfile.add(new Profiles(R.drawable.img5,R.drawable.img4,R.drawable.img3));
+        listProfile.add(new HomePageProfilesData(R.drawable.img3,R.drawable.img2,R.drawable.img3));
+        listProfile.add(new HomePageProfilesData(R.drawable.img3,R.drawable.img3,R.drawable.img1));
+        listProfile.add(new HomePageProfilesData(R.drawable.img3,R.drawable.img4,R.drawable.img5));
+        listProfile.add(new HomePageProfilesData(R.drawable.img4,R.drawable.img3,R.drawable.img2));
+        listProfile.add(new HomePageProfilesData(R.drawable.img5,R.drawable.img4,R.drawable.img3));
 
 
 

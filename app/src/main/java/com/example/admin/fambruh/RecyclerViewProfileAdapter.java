@@ -15,16 +15,16 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
+public class RecyclerViewProfileAdapter extends RecyclerView.Adapter<RecyclerViewProfileAdapter.MyViewHolder> {
 
     private Context mContext;
-    List<Profiles> mData;
+    List<HomePageProfilesData> mData;
 
     public static final int LAYOUT_DESIGN_0DD=0;
     public static final int LAYOUT_DESIGN_EVEN=1;
 
 
-    public RecyclerViewAdapter(Context mContext, List<Profiles> mData) {
+    public RecyclerViewProfileAdapter(Context mContext, List<HomePageProfilesData> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
