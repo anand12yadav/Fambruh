@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import com.example.admin.fambruh.Profiles;
 import com.example.admin.fambruh.R;
 import com.example.admin.fambruh.RecyclerViewAdapter;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +48,8 @@ public class ExploreFragment extends Fragment {
 
         return v;
 
+
+
     }
 
     @Override
@@ -54,8 +57,8 @@ public class ExploreFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         listProfile=new ArrayList<>();
-        listProfile.add(new Profiles(R.drawable.img1,R.drawable.img2,R.drawable.img3));
-        listProfile.add(new Profiles(R.drawable.img2,R.drawable.img3,R.drawable.img1));
+        listProfile.add(new Profiles(R.drawable.img3,R.drawable.img2,R.drawable.img3));
+        listProfile.add(new Profiles(R.drawable.img3,R.drawable.img3,R.drawable.img1));
         listProfile.add(new Profiles(R.drawable.img3,R.drawable.img4,R.drawable.img5));
         listProfile.add(new Profiles(R.drawable.img4,R.drawable.img3,R.drawable.img2));
         listProfile.add(new Profiles(R.drawable.img5,R.drawable.img4,R.drawable.img3));

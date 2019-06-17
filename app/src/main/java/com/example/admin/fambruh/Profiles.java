@@ -38,5 +38,6 @@ public class Profiles {
     public void setThumbnail3(int thumbnail3) {
         Thumbnail3 = thumbnail3;
     }
+
 }
 

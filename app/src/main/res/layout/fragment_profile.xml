@@ -74,7 +74,6 @@
             </RelativeLayout>
 
 
-
             <android.support.v7.widget.CardView
                 android:layout_width="330dp"
                 android:layout_height="145dp"
@@ -182,7 +181,7 @@
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
-            <RelativeLayout
+           <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="560dp">
@@ -190,11 +189,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Memories"
+                    android:layout_marginLeft="10dp"
+                    android:text="Moments"
                     android:textSize="24sp"
-                    android:layout_marginLeft="10dp"/>
+                    android:id="@+id/txtMoments"/>
 
-                <RelativeLayout
+               <android.support.v7.widget.RecyclerView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/storiesData_recyclerView"
+                   android:layout_below="@id/txtMoments">
+
+               </android.support.v7.widget.RecyclerView>
+
+              <!--  <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp">
@@ -203,8 +211,8 @@
                         android:id="@+id/card1"
                         android:layout_width="165dp"
                         android:layout_height="280dp"
-                        app:cardCornerRadius="10dp"
-                        android:layout_marginLeft="10dp">
+                        android:layout_marginLeft="10dp"
+                        app:cardCornerRadius="10dp">
 
                     </android.support.v7.widget.CardView>
 
@@ -212,66 +220,67 @@
                         android:id="@+id/card2"
                         android:layout_width="165dp"
                         android:layout_height="135dp"
-                        app:cardCornerRadius="10dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_toRightOf="@id/card1"
-                        android:layout_marginLeft="10dp">
+                        app:cardCornerRadius="10dp">
 
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
                         android:id="@+id/card3"
-                        android:layout_marginTop="10dp"
                         android:layout_width="165dp"
                         android:layout_height="135dp"
-                        app:cardCornerRadius="10dp"
-                        android:layout_toRightOf="@id/card1"
                         android:layout_below="@id/card2"
-                        android:layout_marginLeft="10dp">
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/card1"
+                        app:cardCornerRadius="10dp">
 
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
                         android:id="@+id/card4"
-                        android:layout_marginTop="10dp"
                         android:layout_width="165dp"
                         android:layout_height="135dp"
-                        app:cardCornerRadius="10dp"
                         android:layout_below="@id/card1"
-                        android:layout_marginLeft="10dp">
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="10dp">
 
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
                         android:id="@+id/card5"
-                        android:layout_marginTop="10dp"
                         android:layout_width="165dp"
                         android:layout_height="135dp"
-                        app:cardCornerRadius="10dp"
                         android:layout_below="@id/card4"
-                        android:layout_marginLeft="10dp">
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="10dp">
 
                     </android.support.v7.widget.CardView>
 
 
                     <android.support.v7.widget.CardView
                         android:id="@+id/card6"
-                        android:layout_marginTop="10dp"
-
                         android:layout_width="165dp"
+
                         android:layout_height="280dp"
-                        app:cardCornerRadius="10dp"
-                        android:layout_marginLeft="10dp"
                         android:layout_below="@id/card3"
-                        android:layout_toRightOf="@id/card4">
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/card4"
+                        app:cardCornerRadius="10dp">
 
                     </android.support.v7.widget.CardView>
 
                 </RelativeLayout>
+                -->
 
 
 
+-->
             </RelativeLayout>
-
 
 
         </RelativeLayout>

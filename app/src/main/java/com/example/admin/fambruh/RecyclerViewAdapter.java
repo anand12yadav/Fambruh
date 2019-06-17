@@ -3,10 +3,15 @@ package com.example.admin.fambruh;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -43,9 +48,36 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
 
-        myViewHolder.profileImages1.setImageResource(mData.get(i).getThumbnail());
-        myViewHolder.profileImages2.setImageResource(mData.get(i).getThumbnail2());
-        myViewHolder.profileImages3.setImageResource(mData.get(i).getThumbnail3());
+      //  myViewHolder.profileImages1.setImageResource(mData.get(i).getThumbnail());
+      //  myViewHolder.profileImages2.setImageResource(mData.get(i).getThumbnail2());
+      //  myViewHolder.profileImages3.setImageResource(mData.get(i).getThumbnail3());
+
+        if(i==LAYOUT_DESIGN_0DD ){
+            Picasso.with(mContext).load(mData.get(i).getThumbnail())
+                    // .into(myViewHolder.profileImages3)
+                    .resize(dp2px(200),500).into(myViewHolder.profileImages1);
+
+            Picasso.with(mContext).load(mData.get(i).getThumbnail2())
+                    // .into(myViewHolder.profileImages3)
+                    .resize(dp2px(200),500).into(myViewHolder.profileImages2);
+
+            Picasso.with(mContext).load(mData.get(i).getThumbnail3())
+                    // .into(myViewHolder.profileImages3)
+                    .resize(dp2px(200),500).into(myViewHolder.profileImages3);
+        }else {
+            Picasso.with(mContext).load(mData.get(i).getThumbnail())
+                    // .into(myViewHolder.profileImages3)
+                    .resize(dp2px(350),1500).into(myViewHolder.profileImages1);
+
+            Picasso.with(mContext).load(mData.get(i).getThumbnail2())
+                    // .into(myViewHolder.profileImages3)
+                    .resize(dp2px(350),800).into(myViewHolder.profileImages2);
+
+            Picasso.with(mContext).load(mData.get(i).getThumbnail3())
+                    // .into(myViewHolder.profileImages3)
+                    .resize(dp2px(350),800).into(myViewHolder.profileImages3);
+        }
+
 
     }
 
@@ -56,7 +88,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView profileImages1,profileImages2,profileImages3;
+       ImageView profileImages1,profileImages2,profileImages3;
+
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -78,5 +111,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
 
     }
+
+    public int dp2px(int dp){
+        WindowManager wm =(WindowManager) this.mContext
+                .getSystemService(Context.WINDOW_SERVICE);
+        Display display=wm.getDefaultDisplay();
+        DisplayMetrics displayMetrics=new DisplayMetrics();
+
+        display.getMetrics(displayMetrics);
+        return (int) (dp*displayMetrics.density+0.5f);
+
+
+    }
+
 
 }
