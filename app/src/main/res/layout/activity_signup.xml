@@ -8,6 +8,16 @@
     tools:context=".SignupActivity"
     android:background="@color/colorAccent">
 
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/app_logo"
+        android:src="@drawable/logo"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="100dp"
+        />
+
+
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,19 +26,31 @@
         android:layout_marginTop="250dp">
 
         <EditText
-            android:id="@+id/username"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Username"
-            android:background="@drawable/round_buttons_border"
-            android:padding="10dp"/>
-
-        <EditText
             android:id="@+id/phoneNumber"
-            android:layout_below="@id/username"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Phone number"
+            android:background="@drawable/round_buttons_border"
+            android:padding="10dp"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_below="@id/phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Username"
+            android:inputType="phone"
+            android:background="@drawable/round_buttons_border"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_below="@id/username"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Password"
             android:inputType="phone"
             android:background="@drawable/round_buttons_border"
             android:padding="10dp"
@@ -38,7 +60,7 @@
             android:id="@+id/signup"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@id/phoneNumber"
+            android:layout_below="@id/password"
             android:layout_marginTop="10dp"
             android:background="@drawable/round_buttons"
             android:text="Sign up"
