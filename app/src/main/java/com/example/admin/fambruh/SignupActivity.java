@@ -45,7 +45,7 @@ public class SignupActivity extends AppCompatActivity {
 
 
               startActivity(intent);
-         //       finish();
+             finish();
             }
         });
 
