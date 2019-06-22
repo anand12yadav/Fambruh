@@ -27,6 +27,7 @@
         <EditText
             android:id="@+id/username"
             android:layout_width="match_parent"
+            android:inputType="text"
             android:layout_height="50dp"
             android:hint="Username"
             android:background="@drawable/round_buttons_border"
@@ -36,6 +37,7 @@
             android:id="@+id/password"
             android:layout_below="@id/username"
             android:layout_width="match_parent"
+            android:inputType="textPassword"
             android:layout_height="50dp"
             android:hint="Password"
             android:background="@drawable/round_buttons_border"

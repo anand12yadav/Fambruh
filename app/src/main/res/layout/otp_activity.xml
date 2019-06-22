@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity"
+    android:background="@color/colorAccent">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/app_logo"
+        android:src="@drawable/logo"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="100dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="65dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="300dp">
+
+
+
+    <EditText
+        android:id="@+id/otp"
+        android:hint="OTP"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/round_buttons_border"
+        android:padding="10dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/otp"
+        android:id="@+id/verify"
+        android:text="Verify OTP"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_buttons"
+        android:textColor="@color/colorAccent" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
