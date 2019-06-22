@@ -25,10 +25,12 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.admin.fambruh.Fragment.ExploreFragment;
 import com.example.admin.fambruh.Fragment.ProfileFragment;
 import com.example.admin.fambruh.Fragment.StoriesFragment;
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 
 import org.json.JSONArray;
@@ -52,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        requestQueue = Volley.newRequestQueue(MainActivity.this);
+        sharedPreferences = this.getSharedPreferences(Constants.userDetails, MODE_PRIVATE);
+        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+        fetchLocation();
 
         bottomNavigationView=findViewById(R.id.bottomNavigationButtons);
         bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
@@ -85,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
             };
+
     private void fetchLocation() {
 
         if (ContextCompat.checkSelfPermission(MainActivity.this,

@@ -17,6 +17,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -37,11 +38,12 @@ public class SocialInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_social_info);
 
-        next=findViewById(R.id.next);
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        requestQueue = Volley.newRequestQueue(SocialInfoActivity.this);
 
+        next = (Button)findViewById(R.id.next);
+        next.setOnClickListener ( new View.OnClickListener () {
+            @Override
+            public void onClick(View v) {
 
                 sc_username = (EditText)findViewById ( R.id.snapchatText );
                 fb_username = (EditText)findViewById ( R.id.fbText );
