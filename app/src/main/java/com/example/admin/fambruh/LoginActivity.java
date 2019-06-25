@@ -34,6 +34,7 @@ public class LoginActivity extends AppCompatActivity {
     Context context = this;
     SharedPreferences.Editor editor;
     private final String TAG = "Login Activity";
+   // https://source.unsplash.com/random/150x100?selfie
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
